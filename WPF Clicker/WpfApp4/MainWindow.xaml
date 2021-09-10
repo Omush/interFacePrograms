@@ -1,0 +1,252 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="ClikerGame" Height="450" Width="800">
+    <Border Background="#272537" CornerRadius="20">
+
+        <Grid RenderTransformOrigin="0.518,0.514">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+
+            
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="NazwaKoty" Text="Koty"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Center"
+				   Foreground="White"
+				   FontSize="20"
+				   Margin="0,5,0,0"/>
+                <Button x:Name="Kot"
+                             Content="Generuj 1$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Kot_Kup"
+						     Margin="-100,0,0,20" Visibility="Visible"
+                            />
+                <Button x:Name="_Kot"
+                             Content="x1           20$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_kot_UP"
+						     Margin="100,-71,0,20" Visibility="Visible"
+                            />
+                <TextBlock x:Name="NazwaPaczek" Text="Paczki"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Center"
+				   Foreground="White"
+				   FontSize="20"
+				   Margin="0,5,0,0"/>
+                <Button x:Name="Paczek"
+                             Content="Generuj 2$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Paczek_Kup"
+						     Margin="-100,0,0,20" Visibility="Hidden"
+                            />
+                
+                <Button x:Name="_Paczek"
+                             Content="x1           40$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Paczek_UP"
+						     Margin="100,-71,0,20" Visibility="Hidden"
+                            />
+                <TextBlock x:Name="NazwaFarba" Text="Farby"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Center"
+				   Foreground="White"
+				   FontSize="20"
+				   Margin="0,5,0,0"/>
+                <Button x:Name="Farba"
+                             Content="Generuj 5$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Kup_Farba"
+						     Margin="-100,0,0,20" Visibility="Hidden"
+                            />
+                <Button x:Name="_Farba"
+                             Content="x1           60$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Farba_UP"
+						     Margin="100,-71,0,20" Visibility="Hidden"
+                            />
+                <TextBlock x:Name="NazwaRower" Text="Rowery"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Center"
+				   Foreground="White"
+				   FontSize="20"
+				   Margin="0,5,0,0"/>
+                <Button x:Name="Rower"
+                             Content="Generuj 10"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Kup_Rower"
+						     Margin="-100,20,0,20" Visibility="Hidden"
+                            />
+                <Button x:Name="_Rower"
+                             Content="x1           80$"
+							 Height="50"
+                             Width="90"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Rower_UP"
+						     Margin="100,-71,0,20" Visibility="Hidden"
+                            />
+               
+               
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock x:Name="TextKot" Text="Ilosc posiadana"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Left"
+				   Foreground="White"
+				   FontSize="22"
+				   Margin="20,15,0,0"/>
+                
+                <ProgressBar x:Name="prb_Kot" Height="20" Width="200"
+                             Value="0"
+                             Margin="-320,0,0,22"
+                             Background="Transparent"
+                             Foreground="Lime"/>
+                <TextBlock x:Name="TextPaczek" Text="Ilosc"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Left"
+				   Foreground="White"
+				   FontSize="22"
+				   Margin="20,15,0,0"/>
+
+                <ProgressBar x:Name="prb_Paczek" Height="20" Width="200"
+                             Value="0"
+                             Margin="-320,0,0,22"
+                             Background="Transparent"
+                             Foreground="Lime"/>
+                
+                <Button x:Name="OdblokujPaczek"
+                             Content="Odblokuj Paczki za 60 $"
+							 Height="50"
+                             Width="160"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Paczek_Odblokuj"
+						     Margin="50,-60,0,20" Visibility="Visible"
+                            />
+                
+                <TextBlock x:Name="TextFarba" Text="Ilosc"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Left"
+				   Foreground="White"
+				   FontSize="22"
+				   Margin="20,15,0,0"/>
+
+                <ProgressBar x:Name="prb_Farba" Height="20" Width="200"
+                             Value="0"
+                             Margin="-320,0,0,22"
+                             Background="Transparent"
+                             Foreground="Lime"/>
+                <Button x:Name="OdblokujFarba"
+                             Content="Odblokuj farbe za 260 $"
+							 Height="50"
+                             Width="155"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Farbe_Odblokuj"
+						     Margin="50,-60,0,20" Visibility="Visible"
+                            />
+                <TextBlock x:Name="TextRower" Text="Ilosc"
+				   
+                   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Left"
+				   Foreground="White"
+				   FontSize="22"
+				   Margin="20,15,0,0"/>
+
+                <ProgressBar x:Name="prb_Rower" Height="20" Width="200"
+                             Value="0"
+                             Margin="-320,0,0,0"
+                             Background="Transparent"
+                             Foreground="Lime"/>
+
+                <Button x:Name="OdblokujRower"
+                             Content="Odblokuj rower za 440 $"
+							 Height="50"
+                             Width="155"
+							 Foreground="White"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+							 FontSize="14"
+							 Click="btn_Rower_Odblokuj"
+						     Margin="50,-40,0,20" Visibility="Visible"
+                            />
+                <TextBlock x:Name="Saldo" Text="Saldo:"
+				   Visibility="Visible"  
+                   VerticalAlignment="Center"
+				   HorizontalAlignment="Left"
+				   Foreground="White"
+				   FontSize="22"
+				   Margin="350,-647,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
+
